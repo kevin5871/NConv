@@ -2,7 +2,7 @@
 * This project is only tested in `Windows`
 
 ## Usage
-1. Start `Nconv.py`
+1. Start `nconv.py`
 2. Open Files
 3. Wait for Finish
 4. `out_text.txt` is what you are waiting for.
