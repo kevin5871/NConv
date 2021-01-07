@@ -17,9 +17,15 @@
  * For `EPUB` :
  `pip install epub-conversion`
  `pip install xml_cleaner`
+ * For GUI :
+ `pip install pyqt5`
+
+ * for windows, install tesseract-ocr, <b>poppler</b> and make sure they are registered in PATH
  
- * for windows, install tesseract-ocr, <b>poppler</b> and make sure they are registeed in PATH
- 
+## Options
+* First Line - Mode (0 - `Console`, 1 - `GUI` (Default))
+* Second Line - Language (`kor`(korean) for default.)
+
 ## Details
 * `PDF` and `ZIP` files are read by `tesseract-ocr`
 * only images are allowed in `ZIP` files.
