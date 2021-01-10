@@ -2,11 +2,11 @@ import tkinter
 import sys
 import os
 from tkinter import *
+from tkinter import messagebox
 from tkinter import filedialog
 from pathlib import Path
 import tempfile
 from zipfile import ZipFile
-from PyQt5 import QtWidgets, QtGui, QtCore
 
 root = Tk()
 root.withdraw()
