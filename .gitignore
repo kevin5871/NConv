@@ -3,3 +3,4 @@ NConv.ui
 /build
 /dist
 nconv.spec
+nconv-gui-dev.py

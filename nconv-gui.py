@@ -7,7 +7,7 @@ from pathlib import Path
 import tempfile
 from zipfile import ZipFile
 from PyQt5 import QtWidgets, QtGui, QtCore
-from fbs_runtime.application_context.PyQt5 import ApplicationContext
+#from fbs_runtime.application_context.PyQt5 import ApplicationContext
 
 root = Tk()
 root.withdraw()
@@ -148,7 +148,8 @@ def ImagetoTxt():
         ui.textBrowser.append("[WARNING] Please be patient - It's Still Working.")
     f = open(Output_File, "a", encoding="utf-8")
     for i in range(1, filelimit + 1):
-        appctxt.app.processEvents()
+        #appctxt.app.processEvents()
+        app.processEvents()
         percent = int(i / filelimit * 100)
         if md == 0:
             print("ImagetoTxt Process : %s / %s (%d%%)" %
@@ -327,7 +328,8 @@ def End():
     ui.pushButton.setEnabled(True)
 
 if __name__ == "__main__":
-    appctxt = ApplicationContext()
+    #appctxt = ApplicationContext()
+    app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
@@ -341,4 +343,5 @@ if __name__ == "__main__":
     ui.textBrowser.append(
         "You are responsible for any incident that occurs after using this program.")
     
-    sys.exit(appctxt.app.exec_())
+   # sys.exit(appctxt.app.exec_())
+    sys.exit(app.exec_())
