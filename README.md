@@ -2,7 +2,7 @@
 * This project is only tested in `Windows`
 
 ## Usage
-1. Start `nconv.py`
+1. Start `nconv.py` (`nconv-gui.py` for GUI)
 2. Open Files
 3. Wait for Finish
 4. `out_text.txt` is what you are waiting for.
@@ -17,12 +17,12 @@
  * For `EPUB` :
  `pip install epub-conversion`
  `pip install xml_cleaner`
- * For GUI :
+ * For GUI (Optional) :
  `pip install pyqt5`
 
  * for windows, install tesseract-ocr, <b>poppler</b> and make sure they are registered in PATH
  
-## Options
+## Options - for CLI, GUI users are not applicable
 * First Line - Mode (0 - `Console`, 1 - `GUI` (Default))
 * Second Line - Language (`kor`(korean) for default.)
 

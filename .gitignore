@@ -1,2 +1,5 @@
 NConv.ui
 /__pycache__
+/build
+/dist
+nconv.spec
