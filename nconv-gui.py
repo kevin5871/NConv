@@ -44,18 +44,19 @@ def PdfToImage():
     from pdf2image import convert_from_path
     import PyPDF2
 
-    reader = PyPDF2.PdfFileReader(File)
+    #reader = PyPDF2.PdfFileReader(File)
+    reader = PyPDF2.PdfReader(File)
     pages = convert_from_path(File, dpi=300)
     image_counter = 1
     percent = 0
     for page in pages:
-        percent = int(image_counter / reader.getNumPages() * 100)
+        percent = int(image_counter / len(reader.pages) * 100)
         if md == 0:
             print("PDFtoImage Process : %s / %s (%d%%)" %
-                  (str(image_counter), str(reader.getNumPages()), percent))
+                  (str(image_counter), str(len(reader.pages)), percent))
         else:
             ui.textBrowser.append("[INFO] PDFtoImage Process : %s / %s (%d%%)" %
-                                  (str(image_counter), str(reader.getNumPages()), percent))
+                                  (str(image_counter), str(len(reader.pages)), percent))
             ui.progressBar.setValue(percent)
         page.save(os.path.join(path, "page_"+str(image_counter)+".jpg"), 'JPEG')
         image_counter = image_counter + 1
